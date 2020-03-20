@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "231258592372",
+    "firebase_url": "https://notificaciones-63656.firebaseio.com",
+    "project_id": "notificaciones-63656",
+    "storage_bucket": "notificaciones-63656.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231258592372:android:d431a59b93e5406fff2d21",
+        "android_client_info": {
+          "package_name": "com.mx.erp.midesarrollo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "231258592372-ort6219oagp1jjj5kj6ddciitbjubh1a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mx.erp.midesarrollo",
+            "certificate_hash": "0e2088ce097bf4f0f91a52f47f2f8a41d60b2ad2"
+          }
+        },
+        {
+          "client_id": "231258592372-cnfo32k82tba3ctkbcirkhspmi16nkdh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiOzaXOJvjpVbJZqcjwU85GJ0uSmeUl2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231258592372-cnfo32k82tba3ctkbcirkhspmi16nkdh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
