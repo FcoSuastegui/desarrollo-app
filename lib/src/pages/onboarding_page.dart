@@ -1,110 +1,68 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:flutter/services.dart';
-import 'package:midesarrollo/src/preferences/preferences.dart';
-import 'package:midesarrollo/src/widgets/onboarding_stepper.dart';
-import 'package:midesarrollo/src/widgets/onboarding_template.dart';
+import 'package:midesarrollo/src/controllers/on_boarding_controller.dart';
+import 'package:midesarrollo/src/widgets/Onboarding/onboarding_stepper.dart';
 
-class OnBoardingPage extends StatefulWidget {
-  
-  static final String routeName = 'onboarding';
-  
+class OnBoardingPage extends StatelessWidget {
+  static final String routeName = '/onboarding';
   @override
-  _OnBoardingPageState createState() => _OnBoardingPageState();
-}
-
-class _OnBoardingPageState extends State<OnBoardingPage> {
-  
-  final _prefs = new Preferencias();
-  final PageController _pageViewController = PageController(initialPage: 0);
-  
-  final int _numPages = 3;
-  int _currentPage = 0;
-
-  @override
-  @override
-  void initState() { 
-    super.initState();
-  }
-
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.light,
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              stops: [0.1, 0.4, 0.9 ],
-              colors: [
-                Color.fromRGBO(50, 150, 136, 1.0),
-                Color.fromRGBO(50, 110, 120, 1.0),
-                Color.fromRGBO(0, 38, 62, 1.0)
-              ],
-            )
-          ),
-          child: Column(
-            children: <Widget>[
-              Expanded(
-                child: PageView(
-                  controller: _pageViewController,
-                  onPageChanged: (int page) {
-                    setState(() {
-                        _currentPage = page;
-                    });
-                  },
-                  children: <Widget>[
-                    OnBoardingTemplate(
-                      title: "Conoce",
-                      subtitle: "El estado de tu propiedad.",
-                      image: Image.asset("assets/images/onboarding0.png"),
-                    ),
-                    OnBoardingTemplate(
-                      title: "Consulta.",
-                      subtitle: "Tus estados de cuenta, abonos, adeudos desde donde te encuentres.",
-                      image: Image.asset("assets/images/onboarding1.png"),
-                    ),
-                    OnBoardingTemplate(
-                      title: "Revisa.",
-                      subtitle: "Las publicaciones que se hacen por desarrollo dentro de la plataforma.",
-                      image: Image.asset("assets/images/onboarding2.png"),
-                    )
-                  ],
-                ),
+    return GetBuilder<OnBoardingController>(
+      init: OnBoardingController.instance,
+      builder: (_) => Scaffold(
+        body: AnnotatedRegion<SystemUiOverlayStyle>(
+          value: SystemUiOverlayStyle.light,
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                stops: [0.1, 0.4, 0.9],
+                colors: [Colors.teal[900], Colors.teal[800], Colors.teal[400]],
               ),
-              Container(
-                padding: EdgeInsets.all(24.0),
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: OnBoardingStepper(pages: _numPages, currentPages: _currentPage)
-                    ),
-                    ClipOval(
-                      child: Container(
-                        color: Theme.of(context).primaryColor,
-                        child: IconButton(
-                          icon: Icon(
-                            _currentPage >= 2 ? Icons.done : Icons.trending_flat, 
-                            color: Colors.white,
-                          ),
-                          onPressed: () {
-                            if (_pageViewController.page >= 2) {
-                                _prefs.onboarding = 1;
-                                Navigator.pushReplacementNamed(context, 'inicio');
-                              return;
-                            }
-                            _pageViewController.nextPage(
-                                duration: Duration(milliseconds: 500),
-                                curve: Curves.ease);
-                          },
-                          padding: EdgeInsets.all(13.0),
-                        ),
-                      ),
-                    )
-                  ],
+            ),
+            child: Column(
+              children: <Widget>[
+                Expanded(
+                  child: PageView(
+                    controller: _.pageViewController,
+                    onPageChanged: _.onPageChanged,
+                    children: _.onboarding,
+                  ),
                 ),
-              )
-            ],
+                Obx(
+                  () => Container(
+                    padding: EdgeInsets.all(24.0),
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: OnBoardingStepper(
+                            pages: _.numbPages,
+                            currentPages: _.currentPage.value,
+                          ),
+                        ),
+                        ClipOval(
+                          child: Container(
+                            color: Colors.teal[700],
+                            child: IconButton(
+                              icon: Icon(
+                                _.currentPage.value >= 2
+                                    ? Icons.done
+                                    : Icons.trending_flat,
+                                color: Colors.white,
+                              ),
+                              onPressed: _.onPressed,
+                              padding: EdgeInsets.all(13.0),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

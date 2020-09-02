@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>231258592372-2ut8grp61f58a2p98qa16klpct66amge.apps.googleusercontent.com</string>
+	<string>499783612363-v3s36gum16rk5u5e85stjj706huk9kth.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.231258592372-2ut8grp61f58a2p98qa16klpct66amge</string>
+	<string>com.googleusercontent.apps.499783612363-v3s36gum16rk5u5e85stjj706huk9kth</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>231258592372-ort6219oagp1jjj5kj6ddciitbjubh1a.apps.googleusercontent.com</string>
+	<string>499783612363-kehsm4c2bkgt5pr7q460alpm6upvdnha.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBacJoXKnMYXGP8UGuKD1LgFY7hbaUsHUw</string>
+	<string>AIzaSyCwAP_a2tZ5qo4my8x06bvhxmQSDdN1erU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>231258592372</string>
+	<string>499783612363</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>mx.com.midesarrollo.erp.notificaciones</string>
 	<key>PROJECT_ID</key>
-	<string>notificaciones-63656</string>
+	<string>notificaciones-push-afb6a</string>
 	<key>STORAGE_BUCKET</key>
-	<string>notificaciones-63656.appspot.com</string>
+	<string>notificaciones-push-afb6a.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +31,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:231258592372:ios:ad5b30dae780e54fff2d21</string>
+	<string>1:499783612363:ios:16e9a1fc0b98855df4284e</string>
 	<key>DATABASE_URL</key>
-	<string>https://notificaciones-63656.firebaseio.com</string>
+	<string>https://notificaciones-push-afb6a.firebaseio.com</string>
 </dict>
 </plist>

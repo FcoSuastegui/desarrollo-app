@@ -47,8 +47,8 @@ android {
         applicationId "com.mx.erp.midesarrollo"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 7
-        versionName '1.1.3'
+        versionCode 11
+        versionName '2.0.1'
     }
 
     signingConfigs {
@@ -90,6 +90,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     testImplementation 'junit:junit:4.12'
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-messaging:20.2.1'
 }
 
 //apply plugin: 'com.android.application'

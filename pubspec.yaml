@@ -19,15 +19,42 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  rxdart: ^0.23.1
-  http:
-  shared_preferences: ^0.5.6
-  url_launcher: ^5.4.1
-  provider:
+  dio: ^3.0.9
+
+  get: ^3.5.4
+  get_storage: ^1.3.0
+
+  google_fonts: ^1.1.0
+  badges: ^1.1.1
+
+  simple_animations: ^1.3.3
+  flutter_form_bloc: ^0.13.0
+  provider: ^4.0.4
+  qr_flutter: ^3.1.0
+
+  smooth_star_rating: ^1.0.4
+  searchable_dropdown: ^1.1.3
+  dropdown_search: ^0.4.3
+  advance_pdf_viewer: ^1.1.6
+
+  esys_flutter_share: ^1.0.2
+  cached_network_image: ^2.0.0
+  connectivity: ^0.4.6
+  image_picker: ^0.6.7
+  device_info: ^0.4.2
+  easy_web_view: ^1.3.0
+
+  #firebase_messaging: ^6.0.16
+  flutter_app_badger: ^1.1.2
+  jwt_decoder: ^1.0.1
+  timeline_tile: ^0.1.2
+  flutter_icons: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -53,9 +80,25 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/onboarding0.png
-    - assets/images/onboarding1.png
-    - assets/images/onboarding2.png
+  - assets/onboarding/onboarding0.png
+  - assets/onboarding/onboarding1.png
+  - assets/onboarding/onboarding2.png
+  - assets/card_wallet/american_express.png
+  - assets/card_wallet/diners_club.png
+  - assets/card_wallet/discover.png
+  - assets/card_wallet/jcb.png
+  - assets/card_wallet/master_card.png
+  - assets/card_wallet/maestro.png
+  - assets/card_wallet/rupay.png
+  - assets/card_wallet/visa.png
+  - assets/card_wallet/contactless_icon.png
+  - assets/card_wallet/card_chip_silver.png
+  - assets/images/imagen_no_disponible.png
+  - assets/images/no_information.png
+  - assets/images/apleeks_01.png
+  - assets/images/midesarrollo_01.png
+  - assets/images/midesarrollo_logo.png
+  - assets/images/oxxopay_brand.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

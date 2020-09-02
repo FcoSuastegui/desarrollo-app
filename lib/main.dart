@@ -1,41 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:midesarrollo/src/bloc/provider.dart';
-import 'package:midesarrollo/src/preferences/preferences.dart';
-import 'package:midesarrollo/src/routes/routes.dart';
-
+import 'package:get/get.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:midesarrollo/src/controllers/root_controller.dart';
+import 'package:midesarrollo/src/helpers/get_storage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final prefs = new Preferencias();
-  await prefs.initPrefs();
-  
-  runApp(MyApp()); 
-}
- 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
+  await GetStorages.instance.init();
+  runApp(MyApp());
 }
 
-class _MyAppState extends State<MyApp> {
-  final _prefs = new Preferencias();
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Provider(
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Mi desarrollo',
-          initialRoute: _prefs.validarToken(),
-          routes: routes,
-          theme: ThemeData(
-            primaryColor: Colors.teal
-          ),
+    return GetBuilder<RootController>(
+      init: RootController.instance,
+      builder: (_) => GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: _.route,
+        defaultTransition: Transition.cupertino,
+        getPages: _.routes,
+        locale: Locale('es'),
+        theme: _.theme,
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        localeResolutionCallback: (deviceLocale, supporteLocate) =>
+            supporteLocate.first,
+        supportedLocales: [
+          const Locale('es'), // Español
+          const Locale('en'), // English
+        ],
       ),
     );
   }

@@ -1,43 +1,50 @@
 {
   "project_info": {
-    "project_number": "231258592372",
-    "firebase_url": "https://notificaciones-63656.firebaseio.com",
-    "project_id": "notificaciones-63656",
-    "storage_bucket": "notificaciones-63656.appspot.com"
+    "project_number": "499783612363",
+    "firebase_url": "https://notificaciones-push-afb6a.firebaseio.com",
+    "project_id": "notificaciones-push-afb6a",
+    "storage_bucket": "notificaciones-push-afb6a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:231258592372:android:d431a59b93e5406fff2d21",
+        "mobilesdk_app_id": "1:499783612363:android:da06d0fc64d37e48f4284e",
         "android_client_info": {
           "package_name": "com.mx.erp.midesarrollo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "231258592372-ort6219oagp1jjj5kj6ddciitbjubh1a.apps.googleusercontent.com",
+          "client_id": "499783612363-kehsm4c2bkgt5pr7q460alpm6upvdnha.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.mx.erp.midesarrollo",
-            "certificate_hash": "0e2088ce097bf4f0f91a52f47f2f8a41d60b2ad2"
+            "certificate_hash": "93c16349c0a7606f0ec26ac319a47b9f79b8f912"
           }
         },
         {
-          "client_id": "231258592372-cnfo32k82tba3ctkbcirkhspmi16nkdh.apps.googleusercontent.com",
+          "client_id": "499783612363-6nj6houan899co6busi7a5ieiuihaa6d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBiOzaXOJvjpVbJZqcjwU85GJ0uSmeUl2k"
+          "current_key": "AIzaSyCV4ytPOMMi3wto_xDox7YWm5ru4X3oUZs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "231258592372-cnfo32k82tba3ctkbcirkhspmi16nkdh.apps.googleusercontent.com",
+              "client_id": "499783612363-6nj6houan899co6busi7a5ieiuihaa6d.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "499783612363-f76jr0mmir66pd1ee6c83pooibgkvmaj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.erp.midesarrollo200120"
+              }
             }
           ]
         }
