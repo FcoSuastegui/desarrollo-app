@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:midesarrollo/src/controllers/notificacion_controller.dart';
 import 'package:midesarrollo/src/helpers/colors.dart';
-import 'package:midesarrollo/src/pages/acceso/acceso_screen.dart';
+//import 'package:midesarrollo/src/pages/acceso/acceso_screen.dart';
 import 'package:midesarrollo/src/pages/home/home_screen.dart';
 import 'package:midesarrollo/src/pages/notificacion/notificacion_screen.dart';
 import 'package:midesarrollo/src/pages/setting/setting_sreen.dart';
@@ -29,7 +29,7 @@ class NavigationBarController extends GetxController {
   Widget listHomePage(int index) {
     List<Widget> list = [
       HomeScreen(),
-      AccesoScreen(),
+      //AccesoScreen(),
       NotificacionScreen(),
       SettingSreen(),
     ];
@@ -43,10 +43,10 @@ class NavigationBarController extends GetxController {
       icon: Icon(Icons.home, color: CustomColors.iconColor, size: 18),
       title: Text("Inicio", style: TextStyle(fontSize: 12.0)),
     ),
-    BottomNavigationBarItem(
+    /* BottomNavigationBarItem(
       icon: Icon(Icons.fingerprint, color: CustomColors.iconColor, size: 18),
       title: Text("Accesos", style: TextStyle(fontSize: 12.0)),
-    ),
+    ), */
     BottomNavigationBarItem(
       icon: Badge(
         badgeContent: GetBuilder<NotificacionController>(
