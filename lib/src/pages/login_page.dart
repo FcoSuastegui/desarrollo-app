@@ -3,6 +3,7 @@ import 'package:flutter_form_bloc/flutter_form_bloc.dart';
 import 'package:get/get.dart';
 import 'package:midesarrollo/src/blocs/login_bloc.dart';
 import 'package:midesarrollo/src/helpers/colors.dart';
+import 'package:midesarrollo/src/helpers/helpers_export.dart';
 import 'package:midesarrollo/src/widgets/Alerts/custom_alert.dart';
 import 'package:midesarrollo/src/widgets/Animation/fade_animation.dart';
 import 'package:midesarrollo/src/widgets/Buttons/button_submit.dart';
@@ -22,9 +23,7 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Stack(
-                children: <Widget>[
-                  Informacion.banner
-                ],
+                children: <Widget>[Informacion.banner],
               ),
               BlocProvider(
                 create: (context) => LoginBloc(),
@@ -71,8 +70,16 @@ class LoginPage extends StatelessWidget {
                                 child: Column(
                                   children: <Widget>[
                                     InputTextFieldBloc(
-                                      textFieldBloc: login.email,
-                                      labelText: 'Correo electrónico',
+                                      textFieldBloc: login.username,
+                                      keyboardType: TextInputType.phone,
+                                      labelText: 'Usuario',
+                                      inputFormatters: [
+                                        MaskedTextInputFormatter(
+                                          mask: 'xxx xxxx xxx',
+                                          separator: ' ',
+                                        ),
+                                      ],
+                                      hintText: "744 1234 567",
                                     ),
                                     InputTextFieldBloc(
                                       suffixButton: SuffixButton.obscureText,
@@ -86,7 +93,13 @@ class LoginPage extends StatelessWidget {
                             SizedBox(
                               height: 40,
                             ),
-                            ButtonSubmit(submit: login.submit, text: 'Acceder'),
+                            FadeAnimation(
+                              1.5,
+                              ButtonSubmit(
+                                submit: login.submit,
+                                text: 'Acceder',
+                              ),
+                            ),
                             SizedBox(
                               height: 40,
                             ),

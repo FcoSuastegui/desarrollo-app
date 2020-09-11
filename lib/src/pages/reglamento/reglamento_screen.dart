@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:midesarrollo/src/controllers/relamento_controller.dart';
+import 'package:midesarrollo/src/controllers/reglamento_controller.dart';
 import 'package:midesarrollo/src/helpers/colors.dart';
 import 'package:midesarrollo/src/widgets/NoInformation/no_information.dart';
 import 'package:midesarrollo/src/widgets/PdfViewer/pdfViewer.dart';

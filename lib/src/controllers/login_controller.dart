@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
+import 'package:midesarrollo/src/controllers/firebase_notificacion_controller.dart';
 import 'package:midesarrollo/src/helpers/get_storage.dart';
 import 'package:midesarrollo/src/helpers/network.dart';
 import 'package:midesarrollo/src/models/usuario_model.dart';
@@ -30,11 +31,8 @@ class LoginController extends GetxController {
           GetStorages.instance.pagina = GetStorages.instance.onboarding == 1 ? '/onboarding' : '/home';
 
           respuesta['status'] = true;
-          respuesta['data'] =
-              GetStorages.instance.onboarding == 1 ? 'onboarding' : 'home';
-
-          //FirebaseNotificationProvider.sendToken();
-          //FirebaseNotificationProvider.initNotification();
+          respuesta['data'] = GetStorages.instance.pagina;
+          FirebaseNotificacionController.instance.iniNotificacion();
 
         } else {
           respuesta['message'] = response.data['error'];

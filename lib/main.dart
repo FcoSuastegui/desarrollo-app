@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:midesarrollo/src/controllers/root_controller.dart';
 import 'package:midesarrollo/src/helpers/get_storage.dart';
 
@@ -16,23 +15,17 @@ class MyApp extends StatelessWidget {
     return GetBuilder<RootController>(
       init: RootController.instance,
       builder: (_) => GetMaterialApp(
-        debugShowCheckedModeBanner: false,
+        title: _.title,
+        debugShowCheckedModeBanner: _.debugShowCheckedModeBanner,
         initialRoute: _.route,
-        defaultTransition: Transition.cupertino,
+        defaultTransition: _.defaultTransition,
         getPages: _.routes,
-        locale: Locale('es'),
+        locale: _.locale,
         theme: _.theme,
-        localizationsDelegates: [
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
+        localizationsDelegates: _.localizationsDelegates,
         localeResolutionCallback: (deviceLocale, supporteLocate) =>
             supporteLocate.first,
-        supportedLocales: [
-          const Locale('es'), // Español
-          const Locale('en'), // English
-        ],
+        supportedLocales: _.supportedLocales,
       ),
     );
   }

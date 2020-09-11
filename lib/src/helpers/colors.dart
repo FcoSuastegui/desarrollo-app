@@ -8,7 +8,8 @@ class CustomColors {
 
   // Theme 
 
-  static const Color primaryColor           = Color(0xff004E41);
+  static const Color primaryColor           = Color(0xff00695C);
+  //static const Color primaryColor           = Color(0xff004E41);
   static const Color secondColor            = Color(0xff014375);
   static const Color iconColor              = Color(0xff014375);
   

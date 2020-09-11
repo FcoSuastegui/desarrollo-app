@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -24,14 +25,7 @@ class HomeScreen extends StatelessWidget {
                             height: MediaQuery.of(context).size.height * 0.10,
                             width: MediaQuery.of(context).size.width,
                             decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                colors: [
-                                  Colors.teal[900],
-                                  Colors.teal[800],
-                                  Colors.teal[400]
-                                ],
-                              ),
+                              color: Colors.teal[800],
                             ),
                             child: null,
                           ),

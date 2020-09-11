@@ -71,7 +71,8 @@ class ListTileCustom extends StatelessWidget {
             trailing != null
                 ? Container(
                     child: Icon(trailing, color: color),
-                    margin: EdgeInsets.only(right: 20.0))
+                    margin: EdgeInsets.only(right: 20.0),
+                  )
                 : Container(),
             widget != null
                 ? Container(child: widget, margin: EdgeInsets.only(right: 20.0))
@@ -90,8 +91,9 @@ class ListTileCustom extends StatelessWidget {
             Radius.circular(5.0),
           ),
           border: Border.all(
-              width: 0.3,
-              color: boxshadow ? Colors.grey[200] : Colors.grey[800]),
+            width: 0.3,
+            color: boxshadow ? Colors.grey[200] : Colors.grey[800],
+          ),
         ),
       ),
     );

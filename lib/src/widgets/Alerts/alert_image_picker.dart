@@ -10,7 +10,7 @@ class AlertImagePicker extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        height: 250,
+        height: 280,
         child: Dialog(
           child: Padding(
             padding: const EdgeInsets.all(16.0),

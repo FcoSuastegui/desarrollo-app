@@ -16,6 +16,8 @@ import 'package:midesarrollo/src/pages/saldo/oxxo_screen.dart';
 import 'package:midesarrollo/src/pages/saldo/saldo_screen.dart';
 import 'package:midesarrollo/src/pages/saldo/tarjeta_screen.dart';
 import 'package:midesarrollo/src/pages/servicio/servicio_screen.dart';
+import 'package:midesarrollo/src/pages/setting/contrasena_screen.dart';
+import 'package:midesarrollo/src/pages/setting/perfil_screen.dart';
 import 'package:midesarrollo/src/pages/setting/setting_sreen.dart';
 import 'package:midesarrollo/src/pages/ticket/ticket_add.dart';
 import 'package:midesarrollo/src/pages/ticket/ticket_screen.dart';
@@ -67,6 +69,8 @@ class Routes {
       'pago-oxxo': OxxoScreen(),
       'acceso-add': AccesoAdd(),
       'acceso-contenido': AccesoContenido(),
+      'perfil': PerfilScreen(),
+      'contrasena': ContrasenaScreen(),
     };
 
     if (page[route] == null) {

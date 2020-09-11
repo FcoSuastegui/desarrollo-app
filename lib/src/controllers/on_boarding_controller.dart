@@ -48,7 +48,7 @@ class OnBoardingController extends GetxController{
   void onPressed() {
     if (_pageViewController.page > 1) {
       GetStorages.instance.onboarding = 0;
-      Get.offAllNamed('home');
+      Get.offAllNamed('/home');
       return;
     }
     _pageViewController.nextPage(

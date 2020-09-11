@@ -25,9 +25,12 @@ class GetStorages {
 
   set token(String valor) => _storage.write('token', valor);
   String get token => _storage.read('token') ?? '';
+  
+  set tokenFireBase(String valor) => _storage.write('tokenFireBase', valor);
+  String get tokenFireBase => _storage.read('tokenFireBase') ?? '';
 
   set pagina(String valor) => _storage.write('pagina', valor);
-  String get pagina => _storage.read('pagina') ?? '';
+  String get pagina => _storage.read('pagina') ?? '/';
 
   set onboarding(int valor) => _storage.write('onboarding', valor);
   int get onboarding => _storage.read('onboarding') ?? 1;
@@ -36,7 +39,7 @@ class GetStorages {
   int get sistema => _storage.read('sistema') ?? 1;
 
   set idusuario(int valor) => _storage.write('idusuario', valor);
-  int get idusuario => _storage.read('idusuario') ?? 11;
+  int get idusuario => _storage.read('idusuario') ?? 0;
   
   set usuario(String valor) => _storage.write('usuario', valor);
   String get usuario => _storage.read('usuario') ?? '';

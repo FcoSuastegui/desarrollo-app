@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:midesarrollo/src/controllers/setting_controller.dart';
 import 'package:midesarrollo/src/helpers/get_storage.dart';
+import 'package:midesarrollo/src/routes/routes.dart';
 import 'package:midesarrollo/src/widgets/Linner/linnerContainer.dart';
 import 'package:midesarrollo/src/widgets/ListTile/listTileCustom.dart';
 
@@ -122,13 +123,13 @@ class SettingSreen extends StatelessWidget {
                             ListTileCustom(
                               text: 'Mi perfil',
                               trailing: Icons.arrow_forward,
-                              onPress: () => {},
+                              onPress: () => Routes.instance.getRoute('perfil'),
                             ),
                             LinnerContainer(top: 5.0),
                             ListTileCustom(
                               text: 'Cambiar contraseña',
                               trailing: Icons.lock,
-                              onPress: () => {},
+                              onPress: () => Routes.instance.getRoute('contrasena'),
                             ),
                             LinnerContainer(top: 5.0),
                             ListTileCustom(

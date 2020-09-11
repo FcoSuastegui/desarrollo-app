@@ -53,9 +53,10 @@ class NotificacionScreen extends StatelessWidget {
           ? Icon(Icons.done, color: CustomColors.iconColor)
           : Icon(Icons.done_all, color: CustomColors.iconColor),
       trailing: Iconos.nombre(
-          nombre: notificacion.icono,
-          size: 25.0,
-          color: CustomColors.iconColor),
+        nombre: notificacion.icono,
+        size: 25.0,
+        color: CustomColors.iconColor,
+      ),
       onPress: () {
         if (notificacion.status) {
           controller.leerNotificacion(notificacion.id);

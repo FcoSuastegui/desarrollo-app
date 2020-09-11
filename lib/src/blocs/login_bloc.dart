@@ -3,14 +3,14 @@ import 'package:midesarrollo/src/blocs/validators/validators.dart';
 import 'package:midesarrollo/src/controllers/login_controller.dart';
 
 class LoginBloc extends FormBloc<String, String> {
-  final email = TextFieldBloc();
+  final username = TextFieldBloc();
   final password = TextFieldBloc();
 
   LoginBloc() {
-    addFieldBlocs(fieldBlocs: [email, password]);
-    email
+    addFieldBlocs(fieldBlocs: [username, password]);
+    username
       ..addValidators(
-          [Validators.requiredField(email), Validators.emailFormat(email)]);
+          [Validators.requiredField(username), Validators.numeroCelular(username)]);
     password..addValidators([Validators.requiredField(password)]);
   }
 
@@ -18,15 +18,13 @@ class LoginBloc extends FormBloc<String, String> {
   void onSubmitting() async {
     final response = await LoginController.instance.login(
       {
-        'username': email.value,
+        'username': username.value.replaceAll(' ', ''),
         'password': password.value,
       },
     );
 
-    if (response['status']) {
-      emitSuccess(successResponse: response['data']);
-    } else {
-      emitFailure(failureResponse: response['message']);
-    }
+    response['status']
+        ? emitSuccess(successResponse: response['data'])
+        : emitFailure(failureResponse: response['message']);
   }
 }
