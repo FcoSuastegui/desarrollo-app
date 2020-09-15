@@ -18,7 +18,7 @@ class GetStorages {
   // Setter y getters de datos
   
   set url(String valor) => _storage.write('url', valor);
-  String get url => _storage.read('url') ?? 'https://qa.midesarrollo.com.mx';
+  String get url => _storage.read('url') ?? 'https://erp.midesarrollo.com.mx';
 
   set server(String valor) => _storage.write('server', valor);
   String get server => _storage.read('server') ?? url + '/server/api';
