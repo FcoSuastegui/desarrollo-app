@@ -26,6 +26,7 @@ class AppBarDefault extends PreferredSize {
   Widget build(BuildContext context) {
     return AppBar(
       centerTitle: centerTitle,
+      brightness: Brightness.light,
       leading: leading,
       title: title,
       actions: actions,

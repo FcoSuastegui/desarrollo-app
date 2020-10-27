@@ -40,10 +40,54 @@
               "client_type": 3
             },
             {
-              "client_id": "499783612363-f76jr0mmir66pd1ee6c83pooibgkvmaj.apps.googleusercontent.com",
+              "client_id": "499783612363-6808a7s03a041ke02d9dt19sv180f9is.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.erp.midesarrollo200120"
+                "bundle_id": "mx.com.midesarrollo.erp.pro"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499783612363:android:4701f786765241d1f4284e",
+        "android_client_info": {
+          "package_name": "com.mx.erp.midesarrollo.pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499783612363-5unkpnjia7opohjqm7e5hhcaj1kpha13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mx.erp.midesarrollo.pro",
+            "certificate_hash": "93c16349c0a7606f0ec26ac319a47b9f79b8f912"
+          }
+        },
+        {
+          "client_id": "499783612363-6nj6houan899co6busi7a5ieiuihaa6d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV4ytPOMMi3wto_xDox7YWm5ru4X3oUZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499783612363-6nj6houan899co6busi7a5ieiuihaa6d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "499783612363-6808a7s03a041ke02d9dt19sv180f9is.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "mx.com.midesarrollo.erp.pro"
               }
             }
           ]

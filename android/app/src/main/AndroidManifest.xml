@@ -15,7 +15,7 @@
         android:xlargeScreens="false"
     />
     <application
-        android:name="io.flutter.app.FlutterApplication"
+        android:name=".Application"
         android:label="Mi Desarrollo Lite"
         android:icon="@mipmap/launcher_icon">
         <activity

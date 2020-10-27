@@ -25,7 +25,5 @@ class AppThemeData {
     toggleableActiveColor: AppTheme.kPrimaryColor,
     primaryColor: AppTheme.kPrimaryColor,
     backgroundColor: AppTheme.kPrimaryColor,
-    primarySwatch: Colors.blue,
-    visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }

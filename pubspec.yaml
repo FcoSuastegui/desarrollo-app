@@ -50,7 +50,7 @@ dependencies:
   device_info: ^0.4.2
   easy_web_view: ^1.3.0
 
-  firebase_messaging: ^6.0.16
+  firebase_messaging: ^7.0.3
   flutter_app_badger: ^1.1.2
   jwt_decoder: ^1.0.1
   timeline_tile: ^0.1.2
@@ -59,13 +59,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  
-  flutter_launcher_icons: ^0.7.4
-  
-flutter_icons:
-  android: "launcher_icon"
-  image_path: "assets/icon/icon.png"
-  adaptive_icon_background: "assets/icon/icon.png"
+
 
 
 # For information on the generic Dart part of this file, see the
@@ -96,8 +90,8 @@ flutter:
   - assets/images/imagen_no_disponible.png
   - assets/images/no_information.png
   - assets/images/apleeks_01.png
-  - assets/images/midesarrollo_01.png
-  - assets/images/midesarrollo_logo.png
+  - assets/images/desarrollo_banner.png
+  - assets/images/desarrollo_logo.png
   - assets/images/oxxopay_brand.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

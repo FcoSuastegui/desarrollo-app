@@ -3,17 +3,17 @@ import 'package:midesarrollo/app/src/themes/size_config.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static const kPrimaryColor = Color(0xFFC4A27D);
-  static const kPrimaryLightColor = Color(0xFFEAD4A3);
+  static const kPrimaryColor = Color(0xff00695C);
+  static const kPrimaryLightColor = Color(0xff014375);
   static const kPrimaryGradientColor = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [Color(0xFFc4a27d), Color(0xFFEAD4A3)],
+    colors: [Color(0xff00695C), Color(0xff014375)],
   );
 
-  static const kSecondColor = Color(0xFFEAD4A3);
-  static const kTextColor = Color(0xFFA3886C);
-  static const kIconColor = Color(0xFFA3886C);
+  static const kSecondColor = Color(0xff014375);
+  static const kTextColor = Color(0xff00695C);
+  static const kIconColor = Color(0xff014375);
 
   static const kHeaderCircle = Color.fromRGBO(255, 255, 255, 0.17);
   static const kHeaderBlueDark = Color.fromRGBO(255, 255, 255, 0.17);

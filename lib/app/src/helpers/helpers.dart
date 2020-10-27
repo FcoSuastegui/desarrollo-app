@@ -24,7 +24,7 @@ class Helpers {
   }
 
   static Future<void> success({
-    String title: 'App Resort',
+    String title: 'Mi Desarrollo',
     @required String message,
     int duration = 1500,
   }) async {
@@ -40,7 +40,7 @@ class Helpers {
   }
 
   static Future<void> error({
-    String title: 'App Resort',
+    String title: 'Mi Desarrollo',
     @required String message,
     int duration = 1500,
   }) async {
@@ -56,7 +56,7 @@ class Helpers {
   }
 
   static Future<void> warning({
-    String title: 'App Resort',
+    String title: 'Mi Desarrollo',
     @required String message,
     int duration = 1500,
   }) async {

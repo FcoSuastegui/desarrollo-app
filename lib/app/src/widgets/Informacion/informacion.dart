@@ -6,7 +6,7 @@ class Informacion {
   static final logo = Align(
     alignment: Alignment.topLeft,
     child: Image.asset(
-      "assets/images/resort_logo.png",
+      "assets/images/desarrollo_logo.png",
       width: 100.0,
       height: 60.0,
     ),
@@ -31,7 +31,7 @@ class Informacion {
       width: Get.width,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/resort_banner.png"),
+          image: AssetImage("assets/images/desarrollo_banner.png"),
           fit: BoxFit.cover,
         ),
       ),

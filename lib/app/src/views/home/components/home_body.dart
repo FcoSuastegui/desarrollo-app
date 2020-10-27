@@ -41,18 +41,25 @@ class HomeBody extends StatelessWidget {
             ),
             LinnerContainer(
               width: 0.20,
-              top: 10.0,
-              bottom: 30.0,
+              bottom: 10.0,
             ),
-            Text(
-              'Accesos directos:',
-              style: TextStyle(
-                color: AppTheme.kTextColor,
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
+            Container(
+              margin: EdgeInsets.only(top: 10.0),
+              child: Text(
+                'Accesos directos:',
+                style: TextStyle(
+                  color: AppTheme.kTextColor,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-            Column(children: controller.listItems),
+            Container(
+              margin: EdgeInsets.only(top: 10.0),
+              child: Column(
+                children: controller.listItems,
+              ),
+            ),
           ],
         ),
       ),

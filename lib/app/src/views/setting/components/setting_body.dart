@@ -97,13 +97,13 @@ class SettingBody extends StatelessWidget {
                     trailing: Icons.arrow_forward,
                     onPress: () => Routes.inst.goToPage("/profile"),
                   ),
-                  LinnerContainer(top: 5.0),
+                  LinnerContainer(),
                   ListTileDefault(
                     text: 'Cambiar contraseña',
                     trailing: Icons.lock,
                     onPress: () => Routes.inst.goToPage("/password"),
                   ),
-                  LinnerContainer(top: 5.0),
+                  LinnerContainer(),
                   ListTileDefault(
                     text: 'Cerrar sesión',
                     trailing: Icons.exit_to_app,

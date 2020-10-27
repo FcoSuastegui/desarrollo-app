@@ -1,3 +1,5 @@
+import 'package:midesarrollo/app/src/data/services/token_service.dart';
+import 'package:midesarrollo/app/src/helpers/get_storage.dart';
 import 'package:midesarrollo/app/src/views/notification/controller/notification_controller.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:device_info/device_info.dart';
@@ -55,7 +57,10 @@ class FireBaseController {
       device = iosInfo.utsname.machine;
       print('Running on ${iosInfo.utsname.machine}');
     }
-    //await TokenService().sendToken(device, token, GetStorages.inst.idusuario);
+    await TokenService.inst.sendToken(
+      idusuario: GetStorages.inst.idusuario,
+      token: token,
+    );
     print(token);
   }
 

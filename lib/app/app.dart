@@ -9,10 +9,9 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: "App Resort",
+      title: "Mi Desarrollo",
       debugShowCheckedModeBanner: false,
       initialRoute: GetStorages.inst.validarToken(),
-      defaultTransition: Transition.cupertino,
       getPages: Routes.inst.routes,
       theme: AppThemeData.themeData,
       locale: Locale('es'),
